@@ -47,5 +47,5 @@ else:
     # score = tf.nn.softmax(predictions[0])
     # st.write(prediction)
     # st.write(score)
-    string="This image is abc" + class_names[index]
+    string="This image is " + class_names[index]
     st.success(string)
