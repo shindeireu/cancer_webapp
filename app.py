@@ -5,7 +5,7 @@ import streamlit as st
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-  model=tf.keras.models.load_model('C:\Users\Aditya\Downloads')
+  model=tf.keras.models.load_model('us_model_web.hd5')
   return model
 with st.spinner('Model is being loaded..'):
   model=load_model()
