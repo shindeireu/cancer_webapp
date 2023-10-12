@@ -39,7 +39,7 @@ else:
     image = PIL.Image.open(file)
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
-    class_names = ["Benign", "Malignant"]
+    class_names = ['Benign', 'Malignant']
     if (predictions[0]<=0.5):
       index=0
     else:
@@ -47,5 +47,5 @@ else:
     # score = tf.nn.softmax(predictions[0])
     # st.write(prediction)
     # st.write(score)
-    string="This image is :"+class_names[index]
+    string="This image is abc" + class_names[index]
     st.success(string)
