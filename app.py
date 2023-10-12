@@ -17,13 +17,13 @@ st.write("""
 
 file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
 import cv2
-from PIL import Image, ImageOps
+import PIL 
 import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 def import_and_predict(image_data, model):
     
         size = (128,128)    
-        image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+        image = PIL.ImageOps.fit(image_data, size, PIL.Image.ANTIALIAS)
         image = np.asarray(image)
         img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         #img_resize = (cv2.resize(img, dsize=(75, 75),    interpolation=cv2.INTER_CUBIC))/255.
@@ -36,7 +36,7 @@ def import_and_predict(image_data, model):
 if file is None:
     st.text("Please upload an image file")
 else:
-    image = Image.open(file)
+    image = PIL.Image.open(file)
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
     class_names = ["Benign", "Malignant"]
