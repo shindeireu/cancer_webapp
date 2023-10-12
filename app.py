@@ -15,7 +15,7 @@ st.write("""
          """
          )
 
-file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
+file = st.file_uploader("Please upload an ultrasound image file", type=["jpg", "png"])
 import cv2
 import PIL
 import numpy as np
@@ -47,5 +47,5 @@ else:
     # score = tf.nn.softmax(predictions[0])
     # st.write(prediction)
     # st.write(score)
-    string="This image is " + class_names[index]
+    string="This above ultrasound is " + class_names[index]
     st.success(string)
