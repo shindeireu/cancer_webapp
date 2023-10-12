@@ -17,6 +17,7 @@ st.write("""
 
 file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
 import cv2
+import PIL
 import PIL.Image 
 import PIL.ImageOps
 import numpy as np
