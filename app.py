@@ -17,7 +17,8 @@ st.write("""
 
 file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
 import cv2
-import PIL 
+import PIL.Image 
+import PIL.ImageOps
 import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
 def import_and_predict(image_data, model):
